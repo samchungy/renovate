@@ -125,7 +125,10 @@
     },
     "assigneesSampleSize": {
       "description": "Take a random sample of given size from `assignees`.",
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "default": null
     },
     "autoApprove": {
@@ -156,11 +159,18 @@
           "type": "string"
         }
       ],
-      "default": null
+      "default": null,
+      "type": [
+        "array",
+        "null"
+      ]
     },
     "autodiscoverNamespaces": {
       "description": "Filter the list of autodiscovered repositories by namespaces.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -168,7 +178,10 @@
     },
     "autodiscoverProjects": {
       "description": "Filter the list of autodiscovered repositories by project names.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -176,7 +189,10 @@
     },
     "autodiscoverRepoOrder": {
       "description": "The order method for autodiscover server side repository search.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "enum": [
         "asc",
         "desc"
@@ -185,7 +201,10 @@
     },
     "autodiscoverRepoSort": {
       "description": "The sort method for autodiscover server side repository search.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "enum": [
         "alpha",
         "created",
@@ -197,7 +216,10 @@
     },
     "autodiscoverTopics": {
       "description": "Filter the list of autodiscovered repositories by topics.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -392,7 +414,10 @@
     },
     "branchConcurrentLimit": {
       "description": "Limit to a maximum of x concurrent branches. 0 means no limit, `null` (default) inherits value from `prConcurrentLimit`.",
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "default": null
     },
     "branchName": {
@@ -877,7 +902,10 @@
     },
     "defaultRegistryUrls": {
       "description": "List of registry URLs to use as the default for a datasource.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -914,7 +942,10 @@
     },
     "dependencyDashboardLabels": {
       "description": "These labels will always be applied on the Dependency Dashboard issue, even when they have been removed manually.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -1052,7 +1083,10 @@
     },
     "dryRun": {
       "description": "If enabled, perform a dry run by logging messages instead of creating/updating/deleting branches and PRs.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "enum": [
         "extract",
         "lookup",
@@ -1074,7 +1108,10 @@
     },
     "encrypted": {
       "description": "An object containing configuration encrypted with project key.",
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "default": null,
       "$ref": "#"
     },
@@ -1084,7 +1121,10 @@
     },
     "endpoint": {
       "description": "Custom endpoint to use.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "env": {
@@ -1436,17 +1476,26 @@
     },
     "groupName": {
       "description": "Human understandable name for the dependency group.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "groupSlug": {
       "description": "Slug to use for group (e.g. in branch name). Slug is calculated from `groupName` if `null`.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "hashedBranchLength": {
       "description": "If enabled, branch names will use a hashing function to ensure each branch has that length.",
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "default": null
     },
     "helm-requirements": {
@@ -1573,7 +1622,10 @@
               },
               "artifactAuth": {
                 "description": "A list of package managers to enable artifact auth. Only managers on the list are enabled. All are enabled if `null`.",
-                "type": "array",
+                "type": [
+                  "array",
+                  "null"
+                ],
                 "items": {
                   "type": "string",
                   "enum": [
@@ -1589,7 +1641,10 @@
               },
               "concurrentRequestLimit": {
                 "description": "Limit concurrent requests per host.",
-                "type": "integer",
+                "type": [
+                  "integer",
+                  "null"
+                ],
                 "default": null
               },
               "dnsCache": {
@@ -1613,17 +1668,26 @@
               },
               "httpsCertificate": {
                 "description": "The certificate chains in PEM format.",
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "default": null
               },
               "httpsCertificateAuthority": {
                 "description": "The overriding trusted CA certificate.",
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "default": null
               },
               "httpsPrivateKey": {
                 "description": "The private key in PEM format.",
-                "type": "string",
+                "type": [
+                  "string",
+                  "null"
+                ],
                 "default": null
               },
               "insecureRegistry": {
@@ -1895,7 +1959,10 @@
     },
     "logContext": {
       "description": "Add a global or per-repo log context to each log entry.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "logLevelRemap": {
@@ -2023,12 +2090,18 @@
     },
     "milestone": {
       "description": "The number of a milestone. If set, the milestone will be set when Renovate creates the PR.",
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "default": null
     },
     "minimumReleaseAge": {
       "description": "Time required before a new release is considered stable.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "minor": {
@@ -2177,7 +2250,10 @@
     },
     "onboardingCommitMessage": {
       "description": "Change this value to override the default onboarding commit message.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "onboardingConfig": {
@@ -2856,7 +2932,10 @@
     },
     "prTitle": {
       "description": "Pull Request title template. Inherits from `commitMessage` if null.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "prTitleStrict": {
@@ -3029,7 +3108,10 @@
     },
     "registryUrls": {
       "description": "List of URLs to try for dependency lookup. Package manager specific.",
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
         "type": "string"
       },
@@ -3050,12 +3132,18 @@
     },
     "reportPath": {
       "description": "Path to where the file should be written. In case of `s3` this has to be a full S3 URI.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "reportType": {
       "description": "Set how, or if, reports should be generated.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "enum": [
         "logging",
         "file",
@@ -3114,7 +3202,10 @@
     },
     "reviewersSampleSize": {
       "description": "Take a random sample of given size from `reviewers`.",
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "default": null
     },
     "rollback": {
@@ -3266,7 +3357,10 @@
     },
     "skipInstalls": {
       "description": "Skip installing modules/dependencies if lock file updating is possible without a full install.",
-      "type": "boolean",
+      "type": [
+        "boolean",
+        "null"
+      ],
       "default": null
     },
     "statusCheckNames": {
@@ -3446,7 +3540,10 @@
     },
     "userAgent": {
       "description": "If set to any string, Renovate will use this as the `user-agent` it sends with HTTP requests.",
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "default": null
     },
     "userStrings": {
